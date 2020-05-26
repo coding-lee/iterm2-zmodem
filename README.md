@@ -39,3 +39,21 @@ ls -lah /usr/local/bin/iterm2-*
         Parameters: /usr/local/bin/iterm2-recv-zmodem.sh
         Instant: checked
 ```
+5.重新启动iterm2，远程连接到Linux，输入rz命令（注意上传路径不要有中文）
+输入rz命令后，如果服务器没有安装过会提示
+```bash
+The program 'rz' is currently not installed. You can install it by typing:
+apt install lrzsz
+```
+> 服务器执行命令yum install lrzsz安装lrzsz后，再重新试一下。
+
+弹出文件选择框，选中要上传的文件，确定，即会将本地文件上传到服务器当前目录下
+
+```
+// 上传
+rz
+```
+```
+// 下载
+sz file path
+```
